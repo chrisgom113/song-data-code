@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
-    />
-    <link rel="stylesheet" href="./assets/style.css" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/styles.css" />
     <title>Project</title>
   </head>
 
@@ -16,25 +15,46 @@
     <header>
       <h1>PLACEHOLDER</h1>
     </header>
-    <div class="field is-grouped">
-      <p class="control is-expanded">
-        <input class="input" type="text" placeholder="Find a song" />
-      </p>
-      <p class="control">
-        <a class="button is-info"> Search </a>
-      </p>
-    </div>
-    <script
-      src="https://code.jquery.com/jquery-3.6.3.min.js"
-      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
-      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
-      crossorigin="anonymous"
-    ></script>
+        <section class="hero is-link is-small py-5 has has-text-centered">
+            <div class="hero-body">
+                <p class="title">
+                    Movie By Song
+                </p>
+                <p class="subtitle">
+                    ...what movie is that from?
+                </p>
+                <div class="field is-grouped">
+                  <p class="control is-expanded">
+                    <input class="input" type="text" placeholder="Find a song" />
+                  </p>
+                  <p class="control">
+                    <a class="button is-info"> Search </a>
+                  </p>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div class="columns is-vcentered my-3">
+            <div class="column is-4">
+                <p class="bd-notification is-primary">First column</p>
+            </div>
+            <div class="column">
+                <p class="bd-notification is-primary">Second column with more content. This is so you can see the
+                    vertical alignment.</p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
 
     <script src="./assets/script.js"></script>
-  </body>
+</body>
+
 </html>
