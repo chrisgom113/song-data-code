@@ -23,10 +23,10 @@
                 </p>
                 <div class="field is-centered px-5">
                   <p class="control px-5 mb-4">
-                    <input class="input" type="text" placeholder="Type a song title" style="width: 30%"/>
+                    <input id="lyric" class="input" type="text" placeholder="Type lyrics" style="width: 30%"/>
                   </p>
                   <p class="control">
-                    <a class="button is-info"> Search </a>
+                    <a id="search-btn" class="button is-info"> Search </a>
                   </p>
                 </div>
             </div>
@@ -34,7 +34,9 @@
     </header>
 
     <main>
-        <div class="columns is-vcentered my-3">
+        <div class="columns my-3">
+            <div id="test" class="column is-7 px-4">
+                <p class="bd-notification is-primary">First column</p>
             <!-- Left side of page, Song Search Results-->
             <div class="column is-6">
                 <header class="card-header">
@@ -98,9 +100,10 @@
                     </button>
                 </header>
             </div>
-            <div class="column">
+            <div class="column is-5">
                 <p class="bd-notification is-primary">Second column with more content. This is so you can see the
                     vertical alignment.</p>
+               
                     <!--this is disPlayCard-3-->
                     <div class='container has-text-centered'>
                         <div class='columns is-mobile is-centered'>
@@ -112,19 +115,7 @@
                                 </div>
                               </div>
                               <div class="card-content">
-                                <p class='is-success'>
-                                  disPlayCard-1' is a computer
-                                  science portal.it was created with
-                                  a goal in mind to provide well 
-                                  written, well thought and
-                                  well explained solutions for 
-                                  selected questions. The core team
-                                  of five super geeks constituting
-                                  of technology lovers and
-                                  computer science enthusiasts have
-                                  been constantly working
-                                  in this direction .
-                                </p>
+                                <img id="gif" src="" alt="">
                       
                               </div>
                               <div>
@@ -152,19 +143,7 @@
             </div>
           </div>
           <div class="card-content">
-            <p class='is-success'>
-              disPlayCard-2' is a computer
-              science portal.it was created with
-              a goal in mind to provide well 
-              written, well thought and
-              well explained solutions for 
-              selected questions. The core team
-              of five super geeks constituting
-              of technology lovers and
-              computer science enthusiasts have
-              been constantly working
-              in this direction .
-            </p>
+            img id="gif" src="" alt="">
   
           </div>
           <div>
@@ -193,19 +172,7 @@
                                 </div>
                               </div>
                               <div class="card-content">
-                                <p class='is-success'>
-                                  disPlayCard-3' is a computer
-                                  science portal.it was created with
-                                  a goal in mind to provide well 
-                                  written, well thought and
-                                  well explained solutions for 
-                                  selected questions. The core team
-                                  of five super geeks constituting
-                                  of technology lovers and
-                                  computer science enthusiasts have
-                                  been constantly working
-                                  in this direction .
-                                </p>
+                                img id="gif" src="" alt="">
                       
                               </div>
                               <div>
@@ -225,8 +192,6 @@
             </div>
         </div>
     </main>
-
-
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
