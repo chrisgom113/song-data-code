@@ -44,7 +44,7 @@ function display() {
             console.log(gifResults);
 
             for (let i = 0; i < gifResults.length; i++) {
-                const gifUrl = gifResults[i].bitly_gif_url;
+                const gifUrl = gifResults[i].images.downsized.url;
                 console.log(gifUrl);
                 for (let i = 0; i < imgEls.length; i++) {
                     imgEls[i].setAttribute('src', gifUrl);
