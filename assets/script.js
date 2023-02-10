@@ -33,32 +33,32 @@ function getSong(lyricText) {
     
 }
 
-function display() {
-    fetch('https://api.giphy.com/v1/gifs/search?api_key=nsaxiRBo6n5X0Io8kwVxtfJCkPtL0V2U&q=antihero&limit=6&offset=0&rating=g&lang=en')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
+// function display() {
+//     fetch('https://api.giphy.com/v1/gifs/search?api_key=nsaxiRBo6n5X0Io8kwVxtfJCkPtL0V2U&q=antihero&limit=6&offset=0&rating=g&lang=en')
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function (data) {
          
-            var gifResults = data.data
-            console.log(gifResults);
+//             var gifResults = data.data
+//             console.log(gifResults);
 
-            for (let i = 0; i < gifResults.length; i++) {
-                const gifUrl = gifResults[i].images.downsized.url;
-                console.log(gifUrl);
-                for (let i = 0; i < imgEls.length; i++) {
-                    imgEls[i].setAttribute('src', gifUrl);
+//             for (let i = 0; i < gifResults.length; i++) {
+//                 const gifUrl = gifResults[i].images.downsized.url;
+//                 console.log(gifUrl);
+//                 for (let i = 0; i < imgEls.length; i++) {
+//                     imgEls[i].setAttribute('src', gifUrl);
 
 
                     
-                }
-            }
-        })
+//                 }
+//             }
+//         })
 
 
-}
+// }
 
-display();
+// display();
 
 searchbtnEl.addEventListener('click', function () {
     var lyricText = inputEl.value;
