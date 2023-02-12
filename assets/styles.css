@@ -1,4 +1,5 @@
 .card-header {
     margin-bottom: 25px;
     display: flex;
+    cursor: pointer;
 }

@@ -40,7 +40,11 @@ function getSong(lyricText) {
                         "card-header-title is-centered"
                     );
                     displaySongInfo.innerHTML = ' "' + songTitle + '" by ' + artistName;
-                   
+                    displaySongInfo.addEventListener("click", function (event) {
+                        var selected = event.target.innerText
+                        modalContainerEl.classList.add('is-active');
+                        displayGif(selected);
+                    });
                     searchHitContainerEl[i].append(displaySongInfo);
                       
                 }
@@ -50,29 +54,36 @@ function getSong(lyricText) {
         });
 }
 
-// function display() {
-//     fetch('https://api.giphy.com/v1/gifs/search?api_key=nsaxiRBo6n5X0Io8kwVxtfJCkPtL0V2U&q=antihero&limit=6&offset=0&rating=g&lang=en')
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (data) {
+// function runModal (songTitle) {
+//     modalContainerEl.classList.add('is-active');
 
-//             var gifResults = data.data
-//             console.log(gifResults);
-
-//             for (let i = 0; i < gifResults.length; i++) {
-//                 const gifUrl = gifResults[i].images.downsized.url;
-//                 console.log(gifUrl);
-//                 for (let i = 0; i < imgEls.length; i++) {
-//                     imgEls[i].setAttribute('src', gifUrl);
-
-//                 }
-//             }
-//         })
-
+//     displayGif(songTitle);
 // }
 
-// display();
+
+
+function displayGif(selected) {
+    fetch('https://api.giphy.com/v1/gifs/search?api_key=nsaxiRBo6n5X0Io8kwVxtfJCkPtL0V2U&q=' + selected + '&limit=6&offset=0&rating=g&lang=en')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+
+            var gifResults = data.data
+
+            for (let i = 0; i < gifResults.length; i++) {
+                const gifUrl = gifResults[i].images.downsized.url;
+                console.log(gifUrl);
+                for (let i = 0; i < imgEls.length; i++) {
+                    imgEls[i].setAttribute('src', gifUrl);
+
+                }
+            }
+        })
+
+}
+
+
 
 searchbtnEl.addEventListener("click", function () {
 
