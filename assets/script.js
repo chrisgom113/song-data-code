@@ -6,7 +6,8 @@ var musicMatchAPIKey = "2951db04af2babfa9b673302d170b3e1";
 var imgEls = document.querySelectorAll("#gif");
 var resetBtnEl = document.getElementById("resetBtnEl");
 var displaySongInfo;
-var modalContainerEl = document.querySelector(".modal")
+var modalContainerEl = document.querySelector(".modal");
+var closeModalBtn = document.getElementById("closeModal");
 
 
 function getSong(lyricText) {
@@ -46,7 +47,7 @@ function getSong(lyricText) {
                         displayGif(selected);
                     });
                     searchHitContainerEl[i].append(displaySongInfo);
-                      
+                    
                 }
             }
 
@@ -54,11 +55,13 @@ function getSong(lyricText) {
         });
 }
 
-// function runModal (songTitle) {
-//     modalContainerEl.classList.add('is-active');
+closeModalBtn.addEventListener ('click', function () {
+ modalContainerEl.classList.remove('is-active');
 
-//     displayGif(songTitle);
-// }
+}) 
+   
+
+
 
 
 
