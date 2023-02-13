@@ -46,7 +46,7 @@ function getSong(lyricText) {
                     displaySongInfo.addEventListener("click", function (event) {
                         var selected = event.target.innerText;
                         modalContainerEl.classList.add('is-active');
-                        modalTitleEl.textContent = songTitle;
+                        modalTitleEl.textContent = ' "' + songTitle + '"';
                         modalArtistEl.textContent = artistName;
                         modalAlbumEl.textContent = albumName;
                         displayGif(selected);
