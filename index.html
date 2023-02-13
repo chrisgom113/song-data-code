@@ -108,11 +108,11 @@
                             </span>
                         </button> -->
                 </header>
-           
+
             </div>
 
 
-            
+
             <!-- Right side , Render Album Tracks -->
             <div>
                 <div class="column is-5 is-hidden">
@@ -213,13 +213,41 @@
     <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
-            <img id="gif" src="" alt="">
-           <button class="is-link">See more from </button> 
-           <button></button>
-          <!-- Any other Bulma elements you want -->
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-200x200">
+                        <img id="gif" src="" alt="related gif">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p id ="modal-title" class="title is-4"></p>
+                            <p id="modal-artist" class="subtitle is-6"></p>
+                            <p id="modal-album" class="subtitle is=6"></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <footer class="card-footer">
+                          <button href="#" class="card-footer-item">View Album Tracks</button>
+                          <button href="#" class="card-footer-item">Close</button>
+                        </footer>
+                      </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            
+            <button class="is-link">See more from </button>
+            <button></button>
+            <!-- Any other Bulma elements you want -->
         </div>
         <button id="closeModal" class="modal-close is-large" aria-label="close"></button>
-      </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>

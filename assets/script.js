@@ -8,11 +8,12 @@ var resetBtnEl = document.getElementById("resetBtnEl");
 var displaySongInfo;
 var modalContainerEl = document.querySelector(".modal");
 var closeModalBtn = document.getElementById("closeModal");
+var modalTitleEl = document.getElementById("modal-title");
+var modalArtistEl = document.getElementById("modal-artist");
+var modalAlbumEl = document.getElementById("modal-album")
 
 
 function getSong(lyricText) {
-
-
 
     fetch(
         "https://stormy-hollows-86205.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q_lyrics=" +
@@ -24,7 +25,7 @@ function getSong(lyricText) {
             return response.json();
         })
         .then(function (data) {
-
+            console.log(data);
 
             var searchHitContainerEl = document.querySelectorAll("#searchHit");
             for (i = 0; i < searchHitContainerEl.length; i++) {
@@ -35,6 +36,7 @@ function getSong(lyricText) {
                     var songTitle = trackLoop.track.track_name;
                     var artistName = trackLoop.track.artist_name;
                     var albumId = trackLoop.track.album_id;
+                    var albumName = trackLoop.track.album_name;
                     var displaySongInfo = document.createElement("p");
                     displaySongInfo.setAttribute(
                         "class",
@@ -42,12 +44,15 @@ function getSong(lyricText) {
                     );
                     displaySongInfo.innerHTML = ' "' + songTitle + '" by ' + artistName;
                     displaySongInfo.addEventListener("click", function (event) {
-                        var selected = event.target.innerText
+                        var selected = event.target.innerText;
                         modalContainerEl.classList.add('is-active');
+                        modalTitleEl.textContent = songTitle;
+                        modalArtistEl.textContent = artistName;
+                        modalAlbumEl.textContent = albumName;
                         displayGif(selected);
                     });
                     searchHitContainerEl[i].append(displaySongInfo);
-                    
+
                 }
             }
 
@@ -55,11 +60,11 @@ function getSong(lyricText) {
         });
 }
 
-closeModalBtn.addEventListener ('click', function () {
- modalContainerEl.classList.remove('is-active');
+closeModalBtn.addEventListener('click', function () {
+    modalContainerEl.classList.remove('is-active');
 
-}) 
-   
+})
+
 
 
 
@@ -90,10 +95,10 @@ function displayGif(selected) {
 
 searchbtnEl.addEventListener("click", function () {
 
-    if(!displaySongInfo === undefined) {
-       songEl.innerHTML = ''; 
+    if (!displaySongInfo === undefined) {
+        songEl.innerHTML = '';
     }
-    
+
 
     var lyricText = inputEl.value;
     getSong(lyricText);
