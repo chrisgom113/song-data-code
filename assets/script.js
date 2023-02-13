@@ -12,6 +12,7 @@ function initPage () {
     var historyEl = document.getElementById("history");
     var closeModalBtn2 = document.getElementById("closeModal2");
     var clearBtn = document.getElementById("clear-history");
+    var viewTracksBtn = document.getElementById("viewTracks");
     
     function getSong(lyricText) {
     
@@ -39,14 +40,32 @@ function initPage () {
                         var displaySongInfo = document.createElement("p");
                         displaySongInfo.setAttribute(
                             "class",
-                            "card-header-title is-centered"
+                            "card-header-title"
                         );
                         displaySongInfo.innerHTML = ' "' + songTitle + '" by ' + artistName;
                         displaySongInfo.addEventListener("click", function (event) {
                             var selected = event.target.innerText;
+                            viewTracksBtn.setAttribute("data-id", albumId);
                             modalContainerEl.classList.add('is-active');
                             modalTitleEl.textContent = selected;
                             displayGif(selected);
+
+                            viewTracksBtn.addEventListener("click", function(event) {
+                                var album = event.target.getAttribute("data-id");
+                                fetch(
+                                    "https://stormy-hollows-86205.herokuapp.com/https://api.musixmatch.com/ws/1.1/album.tracks.get?album_id=" +
+                                    album +
+                                    "&page_size=10&apikey=" +
+                                    musicMatchAPIKey
+                                )
+                                .then(function (response) {
+                                    return response.json();
+                                })
+                                .then(function (data) {
+                                    console.log(data);
+                                })
+                            })
+                            
                         });
                         searchHitContainerEl[i].append(displaySongInfo);
                     }
@@ -100,6 +119,8 @@ function initPage () {
         localStorage.setItem("search", JSON.stringify(searchHistory));
         renderSearchHistory();
     });
+
+    
     
     closeModalBtn.addEventListener('click', function () {
         modalContainerEl.classList.remove('is-active');
