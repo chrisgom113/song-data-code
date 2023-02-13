@@ -60,14 +60,6 @@ function getSong(lyricText) {
         });
 }
 
-closeModalBtn.addEventListener('click', function () {
-    modalContainerEl.classList.remove('is-active');
-
-})
-
-
-
-
 
 
 function displayGif(selected) {
@@ -76,31 +68,27 @@ function displayGif(selected) {
             return response.json();
         })
         .then(function (data) {
-
             var gifResults = data.data
-
             for (let i = 0; i < gifResults.length; i++) {
                 const gifUrl = gifResults[i].images.downsized.url;
                 console.log(gifUrl);
                 for (let i = 0; i < imgEls.length; i++) {
                     imgEls[i].setAttribute('src', gifUrl);
-
                 }
             }
         })
-
 }
 
 
-
 searchbtnEl.addEventListener("click", function () {
-
     if (!displaySongInfo === undefined) {
         songEl.innerHTML = '';
     }
-
-
     var lyricText = inputEl.value;
     getSong(lyricText);
 });
 
+closeModalBtn.addEventListener('click', function () {
+    modalContainerEl.classList.remove('is-active');
+
+})
