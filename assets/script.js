@@ -52,13 +52,13 @@ function initPage() {
                     displaySongInfo.innerHTML = ' "' + songTitle + '" by ' + artistName;
                     displaySongInfo.addEventListener("click", function (event) {
                         var selected = event.target.innerText;
-                       var album = event.target.getAttribute("data-id");
+                        var album = event.target.getAttribute("data-id");
                         modalContainerEl.classList.add('is-active');
                         modalTitleEl.textContent = selected;
                         displayGif(selected);
 
                         viewTracksBtn.addEventListener("click", function (event) {
-                            
+
                             console.log(album);
                             fetch(
                                 "https://stormy-hollows-86205.herokuapp.com/https://api.musixmatch.com/ws/1.1/album.tracks.get?album_id=" +
