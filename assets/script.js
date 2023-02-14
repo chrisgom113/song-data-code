@@ -48,7 +48,7 @@ function initPage() {
                         "class",
                         "card-header-title"
                     );
-                    displaySongInfo.setAttribute("data-id", albumId);
+                    displaySongInfo.setAttribute("data-id", albumName);
                     displaySongInfo.innerHTML = ' "' + songTitle + '" by ' + artistName;
                     displaySongInfo.addEventListener("click", function (event) {
                         var selected = event.target.innerText;
