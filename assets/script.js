@@ -8,6 +8,7 @@ function initPage() {
     var modalContainerEl = document.querySelector(".modal");
     var closeModalBtn = document.getElementById("closeModal");
     var modalTitleEl = document.getElementById("modal-title");
+    var modalAlbumEl = document.getElementById("modal-album");
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
     var historyEl = document.getElementById("history");
     var closeModalBtn2 = document.getElementById("closeModal2");
@@ -55,6 +56,7 @@ function initPage() {
                         var album = event.target.getAttribute("data-id");
                         modalContainerEl.classList.add('is-active');
                         modalTitleEl.textContent = selected;
+                        modalAlbumEl.textContent = "Album: " + album;
                         displayGif(selected);
 
                         viewTracksBtn.addEventListener("click", function (event) {
