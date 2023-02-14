@@ -16,10 +16,10 @@
         <section class="hero is-link is-small px-5 has-text-centered">
             <div class="hero-body px-5">
                 <p class="title">
-                    Find Songs with Lyrics
+                    Lyrics Search
                 </p>
                 <p class="subtitle">
-                    ...what song is that from?
+                    ...Start typing some lyrics, a song title, or artist...
                 </p>
                 <div class="field is-centered px-5">
                     <p class="control px-5 mb-4">
@@ -108,8 +108,11 @@
                             </span>
                         </button> -->
                 </header>
-           
+
             </div>
+
+
+
             <!-- Right side , Render Album Tracks -->
             <div>
                 <div class="column is-5 is-hidden">
@@ -155,7 +158,7 @@
                                         </div>
                                     </div>
                                     <div class="card-content">
-                                        img id="gif" src="" alt="">
+                                        <img id="gif" src="" alt="">
 
                                     </div>
                                     <div>
@@ -184,7 +187,7 @@
                                         </div>
                                     </div>
                                     <div class="card-content">
-                                        img id="gif" src="" alt="">
+                                        <img id="gif" src="" alt="">
 
                                     </div>
                                     <div>
@@ -204,6 +207,36 @@
                 </div>
             </div>
     </main>
+
+
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-200x200">
+                        <img id="gif" src="" alt="related gif">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p id ="modal-title" class="title is-4"></p>
+                            <p id="modal-artist" class="subtitle is-6"></p>
+                            <p id="modal-album" class="subtitle is=6"></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <footer class="card-footer">
+                          <a href="#" class="card-footer-item">View Album Tracks</a>
+                          <a href="#" class="card-footer-item">Close</a>
+                        </footer>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
