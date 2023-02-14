@@ -13,7 +13,10 @@ function initPage () {
     var closeModalBtn2 = document.getElementById("closeModal2");
     var clearBtn = document.getElementById("clear-history");
     var viewTracksBtn = document.getElementById("viewTracks");
+    var searchHitEl = document.querySelectorAll("#searchHit");
     
+    
+
     function getSong(lyricText) {
     
         fetch(
@@ -108,11 +111,17 @@ function initPage () {
     }
     
     renderSearchHistory();
+    
     if (searchHistory.length > 0) {
         getSong(searchHistory[searchHistory.length - 1]);
     }
     
     searchbtnEl.addEventListener("click", function () {
+        for (let i = 0; i < searchHitEl.length; i++) {
+            searchHitEl[i].innerHTML = '';
+            
+        }
+       
         const lyricText = inputEl.value;
         getSong(lyricText);
         searchHistory.push(lyricText);
@@ -138,4 +147,5 @@ function initPage () {
         renderSearchHistory();
     })
 }
+
 initPage();
