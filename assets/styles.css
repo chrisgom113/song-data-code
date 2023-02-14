@@ -1,20 +1,22 @@
+/* Ad-hoc styling for overriding Bulma properties */
+
+/* Class selectors */
 .card-header {
     margin-bottom: 25px;
     display: flex;
     cursor: pointer;
 }
-
 .card-header:hover {
     color: rgba(255, 255, 255, 1);
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
-
+/* ID Selectors */
 #history > input {
     text-transform: capitalize;
 }
-
 #history > input:hover {
-  
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
-    
+}
+#futureDev {
+   font-style:italic;
 }

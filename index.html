@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!-- Page header with search input element and search button -->
     <header>
         <section class="hero is-link is-small px-5 has-text-centered">
             <div class="hero-body px-5">
@@ -32,31 +33,23 @@
             </div>
         </section>
     </header>
-
     <main>
+        <!-- Main page column layout -->
         <div class="columns my-3 px-5">
             <div class="column is-3 px-5">
+                <!-- Search History Column (left) -->
                 <div>
                     <button class="button is-link" type="button" id="clear-history">Clear</button>
                     <label for="history"></label>
                     <form id="history"></form>
                 </div>
-                
             </div>
-            
+            <!-- Container that will render dynamically-added search results (middle/right) -->
             <div id="left-container" class="column is-6 px-5 is-hidden">
-                
             </div>
-
-
-
-          
-            
         </div>
     </main>
-
-
-    <!-- Modal -->
+    <!-- Modal with GIF image container -->
     <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
@@ -75,8 +68,9 @@
                         </div>
                     </div>
                     <div class="card">
+                        <!-- Close Button for modal and placeholder code for future development features -->
                         <footer class="card-footer">
-                            <a id="viewTracks" href="#" class="button card-footer-item is-link">View Album Tracks</a>
+                            <a id="viewTracks" href="#" class="button card-footer-item is-static">View Album Tracks <span id="futureDev"> (coming soon)</span></a>
                             <a id="closeModal2" href="#" class="button card-footer-item is-link">Close</a>
                         </footer>
                     </div>
@@ -85,14 +79,11 @@
         </div>
         <button id='closeModal' class="modal-close is-large" aria-label="close"></button>
     </div>
-
-    
-
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
         integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
-
     <script src="./assets/script.js"></script>
 
 </body>
