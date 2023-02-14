@@ -104,6 +104,9 @@ function initPage () {
             historyItem.setAttribute("class", "form-control");
             historyItem.setAttribute("value", searchHistory[i]);
             historyItem.addEventListener("click", function () {
+                for (let i = 0; i < searchHitEl.length; i++) {
+                    searchHitEl[i].innerHTML = '';
+                }
                 getSong(historyItem.value);
             })
             historyEl.append(historyItem);
