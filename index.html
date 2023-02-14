@@ -35,8 +35,16 @@
 
     <main>
         <div class="columns my-3 px-5">
+            <div class="column is-3 px-5">
+                <div>
+                    <button class="button is-link" type="button" id="clear-history">Clear</button>
+                    <label for="history"></label>
+                    <form id="history"></form>
+                </div>
+                
+            </div>
             <!-- Left side of page, Song Search Results-->
-            <div id="left-container" class="column is-9 px-5 is-hidden">
+            <div id="left-container" class="column is-6 px-5 is-hidden">
                 <header id="searchHit" class="card-header"></header>
                 <header id="searchHit" class="card-header"></header>
                 <header id="searchHit" class="card-header"></header>
@@ -51,14 +59,7 @@
 
 
           
-            <div class="column is-3 px-5">
-                <div>
-                    <button class="button is-link" type="button" id="clear-history">Clear</button>
-                    <label for="history"></label>
-                    <form id="history"></form>
-                </div>
-                
-            </div>
+            
         </div>
     </main>
 
@@ -83,7 +84,7 @@
                     </div>
                     <div class="card">
                         <footer class="card-footer">
-                            <a href="#" class="button card-footer-item is-link">View Album Tracks</a>
+                            <a id="viewTracks" href="#" class="button card-footer-item is-link">View Album Tracks</a>
                             <a id="closeModal2" href="#" class="button card-footer-item is-link">Close</a>
                         </footer>
                     </div>
